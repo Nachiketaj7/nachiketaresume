@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Natraj Stores - Premium Electronics</title>
+<!-- Google Fonts for a modern, clean look -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset some default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Header styles */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e1e2f;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    color: #ffd700;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav a {
+    color: #fff;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffd700;
+  }
+
+  /* Sections common style */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Home / Hero section */
+#home {
+  padding-top: 120px; /* To account for fixed header */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  text-align: center;
+}
+
+#home h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: #ffd700;
+  color: #1e1e2f;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e6c200;
+}
+
+/* About section */
+#about {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+#about p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Products section */
+#products {
+  background-color: #f4f4f8;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#products h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #222;
+}
+
+.product-price {
+  color: #e91e63;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+/* Contact section */
+#contact {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+#contact p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Footer styles */
+footer {
+  background-color: #1e1e2f;
+  color: #ccc;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Natraj Stores</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Home / Hero Section -->
+<section id="home">
+  <h2>Experience the Future of Electronics</h2>
+  <p>Your premium destination for the latest and greatest electronic gadgets. Quality, innovation, and style all in one place.</p>
+  <a href="#products" class="btn">Shop Now</a>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About Natraj Stores</h2>
+  <p>
+    Natraj Stores is your trusted source for premium electronic devices. We offer top brands, competitive prices, and exceptional customer service. Our mission is to bring the latest technology right to your doorstep with style and reliability.
+  </p>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="products-grid">
+    <!-- Sample Product Card -->
+    <div class="product-card">
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fshop.symphonylimited.com%2Fblogs%2Fnews%2Fare-air-coolers-for-homes-worth-it%3Fsrsltid%3DAfmBOoqVX47U269MHjfvrQI9YZL8C3G2h6WzFDwdNLZX4coAHvIp7Pbn&psig=AOvVaw1MD8gab74jWWRMgBcWAccO&ust=1758821988695000&source=images&cd=vfe&opi=89978449&ved=0CBUQjhxqFwoTCOCd-NH48Y8DFQAAAAAdAAAAABAE" />
+      <div class="product-info">
+        <h3>Cooler</h3>
+        <p class="product-price">Rs 5599</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop" class="product-image" />
+      <div class="product-info">
+        <h3>Inverter</h3>
+        <p class="product-price">Rs. 12599</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smart TV" class="product-image" />
+      <div class="product-info">
+        <h3>Washing Machine"</h3>
+        <p class="product-price">Rs 21999</p>
+      </div>
+    </div>
+    <!-- Add more products as needed -->
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Have questions or need assistance? Reach out to us!</p>
+  <div class="contact-info">
+    <p>Email: Nachiketajoshi07@gmail.com</p>
+    <p>Phone: +91 9098618887</p>
+    <p>Address: Main Road, Pansemal Dist. Barwani, (MP)</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Natraj Stores. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
